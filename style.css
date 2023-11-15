@@ -3,7 +3,7 @@ body{
     padding: 0;
     margin: 0;
     width: 100%;
-    background-color: #f79239de;
+    background-color: rgb(245, 230, 202);
 }
 
 header{
@@ -12,15 +12,19 @@ header{
     /* border: solid 2px black; */
     margin: 0;
     padding: 0;
-    background-color: #ff9b00;
+    background-color: #f79239de;
     display: flex;
     justify-content: space-around;
 }
-img{
+img,.logop{
     position: absolute;
     margin: 0 0 0 10px;
     padding: 0 0 0 30px;
     width: 2%;
+}
+
+.logop{
+    float: left;
 }
 
 nav{
@@ -28,7 +32,7 @@ nav{
     margin: auto;
     margin-top: 0;
     padding: 0 0 10px 0;
-    width: 80%;
+    width: 70%;
     height: 50%;
     background-color: #b14646;
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
@@ -44,20 +48,27 @@ ul, #menu{
     justify-content: space-around;
 }
 
-.logo{
-    margin: 0;
-    padding: 5px 0 0 0;
-    display: block;
-    align-self: start;
-}
-
-.logop{
-    float: left;
+.button{
+    border-radius: 5%;
+    background-color: #b14646;
+    padding: 2px;
+    margin-top: 3px;
+    margin-right: 50px;
+    position:absolute;
+    right: 0%;
+    top: 0%;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    /* border: solid 2px black; */
 }
 
 li{
-    padding: 5px 0 0 0;
+    background-color: #f79239de;
+    border-radius: 5%;
+    /*border: solid 2px black;*/
+    padding: 0 5px 0 5px;
+    margin: 2px;
     display: inline-block;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 a{
