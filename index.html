@@ -12,9 +12,9 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="home">
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 fixed-top mb-5">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 fixed-top mb-5" >
       <div class="container-fluid warning">
         <a class="navbar-brand" href="#"
           ><img src="avcerto.png" alt="logo" style="width: 10vw"
@@ -35,36 +35,28 @@
             class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
             style="--bs-scroll-height: 100px"
           >
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            <li class="nav-item btn-group-toggle data-toggle='buttons'">
+              <a class="nav-link active" aria-current="page" href="#home"><button class="btn btn-danger btn-color">HOME</button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CURSOS</a>
+              <a class="nav-link" href="#cursos"><button class="btn btn-danger btn-color autocomplete='off' checked"  onclick="href = '#cursos'" data-bs-toggle="active">CURSOS</button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">SOBRE</a>
+              <a class="nav-link" href="#sobre"><button class="btn btn-danger btn-color">SOBRE</button></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTATOS</a>
+              <a class="nav-link" href="#contatos"><button class="btn btn-danger btn-color" >CONTATOS</button></a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                ÁREA DO ALUNO
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">LOGIN</a></li>
-                <li><a class="dropdown-item" href="#">MATRICULE-SE JÁ!</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">SUPORTE</a>
-                </li>
-              </ul>
+            <li class="nav-item dropdown mt-2">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-danger btn-color dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      ÁREA DO ALUNO
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">LOGIN</a></li>
+                      <li><a class="dropdown-item" href="#">MATRICULE-SE AGORA!</a></li>
+                    </ul>
+                  </div>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" aria-disabled="true">@AMV.cusos</a>
@@ -112,12 +104,12 @@
         </div>
       </div>
     </div>
-    <br><br><br><br><br><br><br>
+    <br><br><br id="cursos"><br><br><br><br >
     <!-- Texto e Video -->
 
     <!-- Caroussel -->
     <div id="carouselExampleIndicators" class="carousel slide overflow-hidden" style="height: 1000px; width: 100%;" >
-      <p class="text-center display-3">Nossos Alunos</p>
+      <p class="text-center display-3">Nossos cursos</p>
 
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -144,10 +136,11 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <br><br><br><br><br><br><br>
+      <br><br id="sobre"><br><br><br><br><br >
       <!-- Caroussel -->
 
       <!-- Sobre -->
+      <div >
       <p class="text-center display-3">Sobre Nós</p>
       <div class="card-group footer-bg-2">
         <div class="card m-3 border-1 border-0">
@@ -181,12 +174,13 @@
           </div>
         </div>
       </div>
-      <br><br><br><br><br><br><br>
+    </div>
+      <br><br id="contatos"><br><br><br><br><br>
       <!-- Sobre -->
 
       <!--Contatos -->
-      <div class="mb-xxl-5 d-block">
-      <p class="text-center display-3">Contatos</p>
+      <div class="mb-xxl-5 d-block" >
+      <p class="text-center display-3" >Contatos</p>
       <div class="row w-50 d-inline-block w-50 m-5">
         <!-- <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">@</span>
