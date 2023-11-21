@@ -21,3 +21,8 @@ body{
 .social{
     width: 50px;
 }
+
+.shadow{
+    /* border: 1px solid #333; */
+    box-shadow: 5px 5px 5px 1px black;
+}
