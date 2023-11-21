@@ -1,0 +1,121 @@
+body{
+    position: absolute;
+    top: 10%;
+    font-family: 'Comic Sans MS', cursive;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: rgb(247, 247, 212);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7vh;
+    /* border: solid 2px black; */
+    margin: 0;
+    padding: 0;
+    background-color: #f79239de;
+    display: flex;
+    justify-content: space-around;
+}
+img,.logop{
+    z-index: +1;
+    position: fixed;
+    right: 91%;
+    top: 0.1%;
+    margin: 0 0 20px 10px;
+    padding: 0 0 0 30px;
+    width: 4%;
+}
+
+.logop{
+    float: left;
+}
+
+nav{
+    display: inline-block;
+    margin: auto;
+    margin-top: 5px;
+    padding: 0 0 10px 0;
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+ul, #menu{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button{
+    border-radius: 5%;
+    background-color: #b14646;
+    padding: 5px;
+    margin-top: 6px;
+    margin-right: 50px;
+    position:absolute;
+    right: 0%;
+    top: 0%;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    /* border: solid 2px black; */
+}
+
+li{
+    background-color: #f79239de;
+    border-radius: 5%;
+    /*border: solid 2px black;*/
+    padding: 0 5px 0 5px;
+    margin: 7px;
+    display: inline-block;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.home{
+    background-color: #c45225;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        width: 15%;
+        height: 100vh;
+        display: inline-block;
+    }
+
+    nav{
+        height: 80%;
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+
+    .logo{
+        margin: 10px;
+    }
+
+    .logop{
+        display: none;
+    }
+
+    li,ul{
+        height: 100%;
+        display: block;
+        align-content: space-around;
+        align-self: start;
+        padding: 0;
+        margin: 10px;
+        flex-direction: column;
+    }
+    }
