@@ -26,3 +26,8 @@ body{
     /* border: 1px solid #333; */
     box-shadow: 5px 5px 5px 1px black;
 }
+
+.imgs{
+    margin: 10px;
+    width: 25%;
+}

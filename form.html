@@ -10,9 +10,469 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body id="home">
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 fixed-top mb-5">
+      <div class="container-fluid warning">
+        <a class="navbar-brand" href="#"
+          ><img src="avcerto.png" alt="logo" style="width: 10vw"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item btn-group-toggle data-toggle='buttons'">
+              <a class="nav-link active" aria-current="page" href="#home"
+                ><button class="btn btn-danger btn-color">HOME</button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#emcurso"
+                ><button
+                  class="btn btn-danger btn-color autocomplete='off' checked"
+                  onclick="href = '#cursos'"
+                  data-bs-toggle="active"
+                >
+                  EM CURSO
+                </button></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#suasaulas"
+                ><button class="btn btn-danger btn-color">SUAS AULAS</button></a
+              >
+              <!-- </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatos"
+                ><button class="btn btn-danger btn-color">CONTATOS</button></a
+              >
+            </li> -->
+            </li>
+
+            <li class="nav-item dropdown mt-2">
+              <div class="btn-group" role="group">
+                <button
+                  type="button"
+                  class="btn btn-danger btn-color dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Olá Fábio!
+                </button>
+                <ul class="dropdown-menu">
+                  <!-- Button trigger modal Login -->
+                  <button
+                    type="button"
+                    class="dropdown-item"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Contato
+                  </button>
+                  <!-- Button trigger modal Matricula -->
+                  <button
+                    type="button"
+                    class="dropdown-item"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2"
+                  >
+                    Log Out
+                  </button>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">@AMV.cusos</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Search"
+            />
+            <button class="btn btn-danger btn-color" type="submit">
+              Pesquisar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <br /><br /><br /><br /><br /><br /><br />
+    <!-- Nav Bar -->
+
+    <!-- Modal contato -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">LOGIN</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <p class="text-center display-3" >Contatos</p>
+      <div class="row d-inline-block m-5">
+        <!-- <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div> -->
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="E-mail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <!-- <span class="input-group-text" id="basic-addon2">@example.com</span>    -->
+          </div>
+          
+          <!-- <div class="mb-3">
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+            <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+          </div> -->
+          
+          <!-- <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">.00</span>
+          </div> -->
+          
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Nome" aria-label="Username">
+            <span class=""></span>
+            <input type="text" class="form-control" placeholder="Sobrenome" aria-label="Server">
+          </div>
+          
+          <div class="input-group ">
+            <span class="input-group-text">Mensagem</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-danger btn-color m-3 w-25 ">Enviar</button>
+          
+      </div>
+
+            <!-- <form>
+    <div class="mb-3">
+      <img class="w-25 m-auto d-block" src="Logo-AMV.png" alt="" srcset="">
+      <p class="text-center display-5">Área do Aluno</p>
+      <label for="exampleInputEmail1" class="form-label">Endereço de e-mail</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Não compartilharemos seu e-mail com ninguém.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Senha</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Lembre-me</label>
+    </div>
+    <a href="">Esqueci a senha minha...</a><br><br>
+    <button type="submit" class="btn btn-danger btn-color"><a href="form.html" style="text-decoration: none; color: white;">Entrar</a></button>
+  </form> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger btn-color" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!-- Modal contato-->
+
+    <!-- Modal logged out -->
+    <div class="modal" tabindex="-1" id="exampleModal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirmação de LogOut</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Tem certeza?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><a style="text-decoration: none; color: white;" href="index.html">Sair</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal logged out -->
+
+
+    <!-- Dados do Aluno -->
+    <div class="row flex-grow-1 m-auto pt-1 mb-5">
+        <p class="text-center display-3">Dados do Aluno</p>
+        <div class="col-sm-6 mb-3 mb-sm-0 ">
+          <div class="card footer-bg-2 border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title display-5 fw-bold">Detalhes do curso:</h5>
+              <p class="card-text fs-4">
+  
+                
+                  Mussum dusum cassum lutium fuzum cafum gugum fudum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.   Mussum Ipsum, cacilds vidis litro abertis. cacilds casvalhos sinjicidis Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Si num tem leite então bota uma pinga aí cumpadi!
+              </p>
+              <a href="#" class="btn btn-danger btn-color">Ir para aula</a>
+            </div>
+          </div>
+          
+        </div>
+        
+       
+
+
+        <div class="col-sm-6 row flex-row-reverse flex-wrap">
+            
+             
+        
+          <img            
+        src="fabio2.png"
+        style="width: 50%;
+        height: 70%;
+        overflow: hidden;"
+        class="float-end d-inline align-left"
+        controls
+      ></img>
+      <span class=" text-xl-start w-50"> 
+        <b>Aluno: </b>Fábio Júnior Assunção <br>
+        <b>CPF: </b>696.969.696-96 <br>
+        <b>E-mail: </b>fabinho.susu@aluno.com <br>
+        <b>Matrícula: </b>696969.6969 <br>
+        <b>Detalhes: </b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, fugiat. <br>
+        <b>Cursos Concluidos: </b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, fugiat. <br>
+        <b>Lista de desejos: </b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora, fugiat. <br>
+        
+      </span>
+      
+          <!-- </div> -->
+
+
+        </div>
+      </div>
+      <br id="emcurso"><br><br></hr>
+    <!-- Dados do Aluno -->
+
+    <!--EM CURSO -->
+    <div class="row flex-grow-1 m-auto ">
+        <p class="text-center display-3">EM CURSO</p>
+        
+        <div class="col-sm-6">
+          <video
+        src="Untitled Video.mp4"
+        class="object-fit-contain w-100"
+        controls
+      ></video>
+          </div>
+          <div class="col-sm-6 mb-3 mb-sm-0 ">
+            <div class="card footer-bg-2 border-0 shadow">
+              <div class="card-body">
+                <h5 class="card-title display-5 fw-bold">Transcrição:</h5>
+                <p class="card-text fs-5">
+    
+                  
+                    Mussum dusum cassum lutium fuzum cafum gugum fudum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.   Mussum Ipsum, cacilds vidis litro abertis. cacilds casvalhos sinjicidis Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Si num tem leite então bota uma pinga aí cumpadi!
+                </p>
+                <!-- <a href="#" class="btn btn-danger btn-color">Matricule-se agora!</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br id="suasaulas"><br><br><br><br > 
+    <!-- EM CURSO -->
+
+    <!-- SUAS AULAS-->
+    <p class="text-center display-3">SUAS AULAS</p>
+
+    <!-- Progress bar -->
+    <div class="progress w-75 m-auto" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar" style="width: 25%">25%</div>
+    </div>
+    <!-- Progress bar -->
+
+    <div class="row row-cols-1 w-50 m-auto row-cols-md-2 g-4" >      
+        <div class="col">
+          <div class="card">
+            <img src="js.png" class="card-img-top imgs" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">JAVASCRIPT</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="css-3.png" class="card-img-top imgs" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CSS</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="/html-5.png" class="card-img-top imgs" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">HTML</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="python.png" class="card-img-top imgs" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">PHYTON</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content .</p>
+            </div>
+          </div>
+        </div>
+      </div><br><br><br><br > <br><br><br><br > 
+    <!-- SUAS AULAS-->
+
+     <!-- Footer -->
+     <div class="">
+      <footer class="text-center text-lg-start bg-body-tertiary text-muted footer-bg-2">
+          <!-- Section: Social media -->
+          <section class="footer-bg-1 d-flex justify-content-center justify-content-lg-between p-4 border-bottom m5">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+              <span>Conecte-se conosco em nossas redes sociais: </span>
+            </div>
+            <!-- Left -->
+        
+            <!-- Right -->
+            <div class="">
+              <a href="" class="me-4 text-decoration-none text-reset">
+                <i class="fab fa-facebook-f"><img class="social" src="facebook.png" alt="" srcset=""></i>
+              </a>
+              <a href="" class="me-4 text-decoration-none text-reset">
+                <i class="fab fa-twitter"><img class="social" src="twitter.png" alt="" srcset=""></i>
+              </a>
+              <a href="" class="me-4 text-reset text-decoration-none">
+                <i class="fab fa-google"><img class="social" src="youtube.png" alt="" srcset=""></i>
+              </a>
+              <a href="" class="me-4 text-decoration-none text-reset">
+                <i class="fab fa-instagram"><img class="social" src="instagram.png" alt="" srcset=""></i>
+              </a>
+              <a href="" class="me-4 text-decoration-none text-reset">
+                <i class="fab fa-linkedin"><img class="social" src="linkedin.png" alt="" srcset=""></i>
+              </a>
+              <a href="" class="me-4 text-decoration-none text-reset">
+                <i class="fab fa-github"><img class="social" src="github.png" alt="" srcset=""></i>
+              </a>
+            </div>
+            <!-- Right -->
+          </section>
+          <!-- Section: Social media -->
+        
+          <!-- Section: Links  -->
+          <section class="footer-bg-1">
+              <div class="container text-center text-md-start mt-5">
+                  <!-- Grid row -->
+                  <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                      <!-- Content -->
+                      <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i><img class="w-50" src="/Logo-AMV.png" alt="" srcset="">
+                      </h6>
+                      <p>
+                        Mussum Ipsum, cacilds vidis litro abertis. Per aumento de cachacis, eu reclamis. Todo mundo vê os porris qos tombis que eu levo! Suco de cevadiss deixa as pessoas mais interessantis. Admodum accumsan disputationi eu m sadipscing et per.
+                      </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                      <!-- Links -->
+                      <h6 class="text-uppercase fw-bold mb-4">
+                        Produtos
+                      </h6>
+                      <p>
+                        <a href="#!" class="text-reset">Angular</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">React</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Vue</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Laravel</a>
+                      </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                      <!-- Links -->
+                      <h6 class="text-uppercase fw-bold mb-4">
+                        Links Úteis
+                      </h6>
+                      <p>
+                        <a href="#!" class="text-reset">Fale conosco</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">SAC- Atendimento ao Consumidor</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Parceiros</a>
+                      </p>
+                      <p>
+                        <a href="#!" class="text-reset">Ajuda</a>
+                      </p>
+                    </div>
+                    <!-- Grid column -->
+            
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                      <!-- Links -->
+                      <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+                      <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                      <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@example.com
+                      </p>
+                      <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                      <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    </div>
+                    <!-- Grid column -->
+                  </div>
+                  <!-- Grid row -->
+                </div>
+          </section>
+          <!-- Section: Links  -->
+        
+          <!-- Copyright -->
+          <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">amvcursos.com</a>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      </div>
+        <!-- Footer -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
